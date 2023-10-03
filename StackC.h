@@ -4,10 +4,12 @@
 typedef struct StackElement 
 {
     int value;
-    StackElement *next;
+    struct StackElement *next;
 
 }StackElement, *Stack;
 
 Stack createStack();
+Stack addStack(int i, Stack st);
+Stack deleteElementStack(Stack st);
 
 #endif

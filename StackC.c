@@ -4,5 +4,24 @@
 
 Stack createStack()
 {
-    return NULL:
+    return NULL;
+}
+
+Stack addStack(int i, Stack st)
+{
+    Stack element;
+    element = malloc(sizeof(StackElement));
+    element->value = i;
+    element->next = st;
+    return element;
+}
+
+Stack deleteElementStack(Stack st)
+{
+    if(st != NULL)
+    {
+        Stack element = st->next;
+        free(st);
+        return element;
+    }
 }
