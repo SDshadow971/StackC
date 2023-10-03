@@ -11,5 +11,6 @@ typedef struct StackElement
 Stack createStack();
 Stack addStack(int i, Stack st);
 Stack deleteElementStack(Stack st);
+Stack emptyStack(Stack st);
 
 #endif

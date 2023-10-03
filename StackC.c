@@ -25,3 +25,14 @@ Stack deleteElementStack(Stack st)
         return element;
     }
 }
+
+Stack emptyStack(Stack st)
+{
+    if(st != NULL)
+    {
+        Stack element = st->next;
+        free(st);
+        emptyStack(element);
+    }  
+    return NULL;
+}
