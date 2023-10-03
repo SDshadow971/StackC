@@ -1,12 +1,12 @@
 #ifndef __StackC__
 #define __StackC__
 
-typedef struct StackElement 
+typedef struct Stack 
 {
     int value;
-    struct StackElement *next;
+    struct Stack next;
 
-}StackElement, *Stack;
+}*Stack;
 
 Stack createStack();
 Stack addStack(int i, Stack st);
