@@ -13,15 +13,18 @@ Stack addStack(int i, Stack st);
 Stack deleteElementStack(Stack st);
 Stack emptyStack(Stack st);
 
+// Meta data for a stack
 typedef struct MetaStack
 {
-    string descStrack;
+    char descStrack[50];
     unsigned int lengthStack;
-    struct Stack stack;
+    Stack stack;
 
 } MetaStack;
 
-MetaStack createEmptyMetaStack(string desc);
-MetaStack createInitMetaStack(string desc, Stack st);
+MetaStack createMetaStack();
+MetaStack addMetaStack(int i, MetaStack mt);
+MetaStack deleteElementMetaStack(MetaStack mt);
+MetaStack emptyMetaStack(MetaStack mt);
 
 #endif
