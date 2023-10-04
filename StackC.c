@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "StackC.h"
 
 Stack createStack()
@@ -36,3 +37,23 @@ Stack emptyStack(Stack st)
     }  
     return NULL;
 }
+
+
+MetaStack createEmptyMetaStack(string desc)
+{
+    MetaStack mt;
+    mt.descStrack = desc;
+    mt.length = 0;
+    mt.stack = NULL;
+    return mt;
+}
+
+MetaStack createInitMetaStack(string desc, Stack st)
+{
+    MetaStack mt;
+    mt.descStrack = desc;
+    mt.length = 0;
+    mt.stack = st;
+    return mt;
+}
+
